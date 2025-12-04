@@ -1,6 +1,7 @@
-\chapter{\LaTeX のすゝめ}\label{ch:examples}
+\chapter{\LaTeX のすゝめ}
+\label{ch:examples}
 
-本章は、この論文スタイルの使用ガイドおよびテンプレートとして機能します。セクション分け、引用、図、表、数式など、必要となる最も一般的な\mynote{そうでもない}要素の実例を示します。
+本章は、\LaTeX の基本的な使い方を紹介します。セクション分け、引用、図、表、数式など、必要となる最も一般的な\mynote{そうでもない}要素の実例を示します。
 
 \section{環境}
 
@@ -199,10 +200,10 @@ Acronym testing: \ac{UML} -- \acs{UML} -- \acf{UML} -- \acp{UML}
 
 \begin{description}
     
-    \item[括弧付き引用:] \ \parencite{fiorella2022}.
-    \item[文中引用:] \ \textcite{fiorella2022} は...を発見した。
-    \item[複数の引用:]\ \parencite{fiorella2022,knuth1984,vaswani2017}.
-    \item[著者と年:]\  \citeauthor{fiorella2022} の (\citeyear{fiorella2022})
+    \item[括弧付き引用:] \parencite{fiorella2022}.
+    \item[文中引用:] \textcite{fiorella2022} は...を発見した。
+    \item[複数の引用:] \parencite{fiorella2022,knuth1984,vaswani2017}.
+    \item[著者と年:] \citeauthor{fiorella2022} の (\citeyear{fiorella2022})
 \end{description}
 
 
@@ -341,6 +342,14 @@ Acronym testing: \ac{UML} -- \acs{UML} -- \acf{UML} -- \acp{UML}
 
 \section{表}
 表には \texttt{booktabs} を、幅の制御には \texttt{tabularx} を使用してください。
+
+下記のサイトで作れます。
+
+\begin{center}
+    \url{https://www.tablesgenerator.com/}
+\end{center}
+
+
 
 \begin{table}[ht]
     \centering
@@ -632,7 +641,7 @@ HDMI Cable 10ft & Cable & 412 & 15 \\
 
 \section{日本語のフォント}
 
-メインフォント\mynote{英文も}はNoto Serif Japaneseを使っています。
+メインフォント\mynote{英文も}はNoto Serif\footnote{a.k.a. 源ノ明朝; Source Han Serif} Japaneseを使っています。
 
 \begin{center}
     \url{https://fonts.google.com/noto/specimen/Noto+Serif+JP}
@@ -680,6 +689,7 @@ HDMI Cable 10ft & Cable & 412 & 15 \\
 
 % Circled numbers 21-50 (Enclosed Alphanumeric Supplement)
 ㉑ ㉒ ㉓ ㉔ ㉕ ㉖ ㉗ ㉘ ㉙ ㉚ ㉛ ㉜ ㉝ ㉞ ㉟
+
 ㊱ ㊲ ㊳ ㊴ ㊵ ㊶ ㊷ ㊸ ㊹ ㊺ ㊻ ㊼ ㊽ ㊾ ㊿
 
 % Parenthesized numbers
@@ -709,48 +719,67 @@ HDMI Cable 10ft & Cable & 412 & 15 \\
 
 % Parenthesized Ideographs
 ㈠ ㈡ ㈢ ㈣ ㈤ ㈥ ㈦ ㈧ ㈨ ㈩
+
 ㈪ ㈫ ㈬ ㈭ ㈮ ㈯ ㈰
+
 ㈱ ㈲ ㈳ ㈴ ㈵ ㈶ ㈷ ㈸ ㈹ ㈺ ㈻ ㈼ ㈽ ㈾ ㈿
+
 ㉀ ㉁ ㉂ ㉃
 
 
 % Circled Katakana
 ㋐ ㋑ ㋒ ㋓ ㋔ ㋕ ㋖ ㋗ ㋘ ㋙ ㋚ ㋛ ㋜ ㋝ ㋞ ㋟
+
 ㋠ ㋡ ㋢ ㋣ ㋤ ㋥ ㋦ ㋧ ㋨ ㋩ ㋪ ㋫ ㋬ ㋭ ㋮ ㋯
+
 ㋰ ㋱ ㋲ ㋳ ㋴ ㋵ ㋶ ㋷ ㋸ ㋹ ㋺ ㋻ ㋼ ㋽ ㋾
 
 % Circled Ideographs
 ㊀ ㊁ ㊂ ㊃ ㊄ ㊅ ㊆ ㊇ ㊈ ㊉
+
 ㊊ ㊋ ㊌ ㊍ ㊎ ㊏ ㊐
+
 ㊑ ㊒ ㊓ ㊔ ㊕ ㊖ ㊗ ㊘ ㊙ ㊚ ㊛ ㊜ ㊝ ㊞ ㊟
-㊠ ㊡ ㊢ ㊣ ㊤ ㊥ ㊦ ㊧ ㊨ ㊩ ㊪ ㊫ ㊬ ㊭ ㊮ ㊯
-㊰
+
+㊠ ㊡ ㊢ ㊣ ㊤ ㊥ ㊦ ㊧ ㊨ ㊩ ㊪ ㊫ ㊬ ㊭ ㊮ ㊯ ㊰
 
 % Japanese Era Names
 ㋿ ㍻ ㍼ ㍽ ㍾
 
 % Telegraph Symbols
 ㍿ ㏠ ㏡ ㏢ ㏣ ㏤ ㏥ ㏦ ㏧ ㏨ ㏩ ㏪ ㏫ ㏬ ㏭ ㏮ ㏯
+
 ㏰ ㏱ ㏲ ㏳ ㏴ ㏵ ㏶ ㏷ ㏸ ㏹ ㏺ ㏻ ㏼ ㏽ ㏾
 
 %% CJK Compatibility (U+3300-U+33FF) - Square Katakana Words
 ㌀ ㌁ ㌂ ㌃ ㌄ ㌅ ㌆ ㌇ ㌈ ㌉ ㌊ ㌋ ㌌ ㌍ ㌎ ㌏
+
 ㌐ ㌑ ㌒ ㌓ ㌔ ㌕ ㌖ ㌗ ㌘ ㌙ ㌚ ㌛ ㌜ ㌝ ㌞ ㌟
+
 ㌠ ㌡ ㌢ ㌣ ㌤ ㌥ ㌦ ㌧ ㌨ ㌩ ㌪ ㌫  ㌭ ㌮ ㌯
+
 ㌰ ㌱ ㌲ ㌳ ㌴ ㌵ ㌶ ㌷ ㌸ ㌹ ㌺ ㌻ ㌼ ㌽ ㌾ ㌿
+
 ㍀ ㍁ ㍂ ㍃ ㍄ ㍅ ㍆ ㍇ ㍈ ㍉ ㍊ ㍋ ㍌ ㍍ ㍎ ㍏
+
 ㍐ ㍑ ㍒ ㍓ ㍔ ㍕ ㍖ ㍗
 
 % Square Time/Date
 ㍘ ㍙ ㍚ ㍛ ㍜ ㍝ ㍞ ㍟ ㍠ ㍡ ㍢ ㍣ ㍤ ㍥ ㍦ ㍧
+
 ㍨ ㍩ ㍪ ㍫ ㍬ ㍭ ㍮ ㍯ ㍰
 
 % Square Latin Abbreviations / Units
 ㎀ ㎁ ㎂ ㎃ ㎄ ㎅ ㎆ ㎇ ㎈ ㎉ ㎊ ㎋ ㎌ ㎍ ㎎ ㎏
+
 ㎐ ㎑ ㎒ ㎓ ㎔ ㎕ ㎖ ㎗ ㎘ ㎙ ㎚ ㎛ ㎜ ㎝ ㎞ ㎟
+
 ㎠ ㎡ ㎢ ㎣ ㎤ ㎥ ㎦ ㎧ ㎨ ㎩ ㎪ ㎫ ㎬ ㎭ ㎮ ㎯
+
 ㎰ ㎱ ㎲ ㎳ ㎴ ㎵ ㎶ ㎷ ㎸ ㎹ ㎺ ㎻ ㎼ ㎽ ㎾ ㎿
+
 ㏀ ㏁ ㏂ ㏃ ㏄ ㏅ ㏆ ㏇ ㏈ ㏉ ㏊ ㏋ ㏌ ㏍ ㏎ ㏏
+
 ㏐ ㏑ ㏒ ㏓ ㏔ ㏕ ㏖ ㏗ ㏘ ㏙ ㏚ ㏛ ㏜ ㏝ 
 \end{flushleft}
 
@@ -758,7 +787,7 @@ HDMI Cable 10ft & Cable & 412 & 15 \\
 
 \subsection{Other Languages}\label{sec:otherlanguages}
 
-一応下記の4種類のフォントを入れてみました。他の言語のフォントを追加すれば、使えるはずです。
+一応下記の4つの言語のフォントを入れてみました\marginnote{satostyle.sty line 154}。他の言語のフォントを追加すれば、使えるはずです。
 
 例えば、タイ語の場合：
 
@@ -847,9 +876,320 @@ HDMI Cable 10ft & Cable & 412 & 15 \\
 \draftfalse  % オフにする
 \end{lstlisting}
 
-Draft Modeをオンにすると、一番最初にVersion History, 各ページ内に今のVersionと時間が出力されます。
+Draft Modeをオンにすると、一番最初にVersion History, 各ページ内に今のVersionと時間が出力されます。\marginnote{In config.tex}
 
 Versionは手動で入力する必要があります。
 \begin{lstlisting}
 \newcommand{\myVersion}{v0.0.2} 
 \end{lstlisting}
+
+\section{余白}
+
+ページのレイアウトは下記の設定で調整できます。\marginnote{In main.tex} \texttt{gutter}と\texttt{fore\_edge}と統一すれば左右の右余白が同じになります。
+
+調整する場合は \texttt{marginnote}と\texttt{todonote}\mynote{使わないなら無視していいです}の余白も合わせて調整する必要があります。
+
+\begin{lstlisting}
+\documentclass[
+  book,
+  twoside,
+  openright,
+  paper=a4,
+  fontsize=11pt, 
+  gutter=25mm,      
+  fore_edge=40mm,  
+  head_space=30mm,
+  linegap=0.8zw,  
+]{jlreq}
+\end{lstlisting}
+
+
+詳細は下記リンクで確認してください\mynote{わかりずらい}。
+\begin{center}
+    \url{https://www.tug.org/texlive//Contents/live/texmf-dist/doc/latex/jlreq/jlreq-ja.html}
+\end{center}
+
+\section{ルビ}
+
+\ruby{吾輩}{わがはい}は猫である。名前はまだ無い。
+どこで生れたかとんと\ruby{見当}{けんとう}がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番\ruby{獰悪}{どうあく}な種族であったそうだ。この書生というのは時々我々を\ruby{捕}{つかま}えて\ruby{煮}{に}て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の\ruby{掌}{てのひら}に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの\ruby{見始}{みはじめ}であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで\ruby{薬缶}{やかん}だ。その\ruby{後}{ご}猫にもだいぶ\ruby{逢}{あ}ったがこんな\ruby{片輪}{かたわ}には一度も\ruby{出会}{でく}わした事がない。のみならず顔の真中があまりに突起している。そうしてその穴の中から時々ぷうぷうと\ruby{煙}{けむり}を吹く。どうも\ruby{咽}{む}せぽくて実に弱った。これが人間の飲む\ruby{煙草}{たばこ}というものである事はようやくこの頃知った。
+
+\section{縦書き}
+
+\begingroup
+
+\noindent\hfill % Pushes everything after it to the right
+  \vbox{\hsize=5cm \tate 
+    % --- Your Vertical Text Here ---
+    吾輩は猫である。名前はまだ無い。
+    どこで生れたかとんと見当がつかぬ。
+    何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。
+    % -------------------------------
+  }
+
+\vspace{1cm}
+
+\noindent\hfill % Pushes everything after it to the right
+\vbox{\hsize=5cm \tate 
+    % --- Your Vertical Text Here ---
+    \ruby{子}{し}\ruby{曰}{いわ}\okurigana{ク}、
+    \ruby{学}{まな}\okurigana{ビテ}\kaeriten{レ}
+    \ruby{時}{とき}\okurigana{ニ}\ruby{習}{なら}\kaeriten{二}\ruby{之}{これ}\kaeriten{一}\okurigana{ヲ}、
+    \ruby{亦}{また}\ruby{説}{よろこ}\okurigana{バ}\kaeriten{レ}
+    \ruby{乎}{し}\okurigana{カ}。
+}
+
+\endgroup
+
+
+\noindent\hfill
+  \vbox{\hsize=10cm \tate \Large
+    
+    % ==========================================
+    % 1. 訓点文 (Kundoku / Kanbun Style)
+    % ==========================================
+    \noindent
+    {\gtfamily\bfseries 春夜宴桃李園序}
+    \vspace{1\zw}
+
+
+    % 夫(レ)天地(ハ-一)者
+    \ruby{夫}{}\okurigana{レ}
+    天\ruby{地}{}\okurigana{ハ}\kaeriten{一}者
+    % 萬(ばん)物(ぶつ)之逆(げき)旅(りょ)(、)
+    \ruby{萬}{ばん}\ruby{物}{ぶつ}
+    之\ruby{逆}{げき}\ruby{旅}{りょ}、
+    % 光(くわう)陰(いん)(ハ-一)者
+    \ruby{光}{くわう}\ruby{陰}{いん}\okurigana{ハ}\kaeriten{一}者
+    % 百代之過(くわ)客(かく)(ナリ)(。)
+    百代之\ruby{過}{くわ}\ruby{客}{かく}\okurigana{ナリ}。
+    % 而(シテ)浮(ふ)生(せい)(ハ)
+    \ruby{而}{}\okurigana{シテ}
+    \ruby{浮}{ふ}\ruby{生}{せい}\okurigana{ハ} 
+    % 若(ごと)(シ-レ)夢(ノ)(。)
+    \ruby{若}{ごと}\okurigana{シ}\kaeriten{レ}\ruby{夢}{}\okurigana{ノ}。
+    % 爲(スコト-レ)歡(よろこび)(ヲ)
+    \ruby{爲}{}\okurigana{スコト}\kaeriten{レ}\ruby{歡}{よろこび}\okurigana{ヲ}
+    % 幾(いく)何(ばく)(ゾ)(。)
+    \ruby{幾}{いく}\ruby{何}{ばく}\okurigana{ゾ}。
+    % 古人秉(とっ)(テ-レ)燭(ヲ)
+    古人\ruby{秉}{とっ}\okurigana{テ}\kaeriten{レ}\ruby{燭}{}\okurigana{ヲ}
+    % 夜遊(ビシハ)(、)
+    夜\ruby{遊}{}\okurigana{ビシハ}、
+    % 良(まこと)(ニ)有(ル-レ)以(ゆゑ)(也)
+    \ruby{良}{まこと}\okurigana{ニ}\ruby{有}{}\okurigana{ル}\kaeriten{レ}
+    \ruby{以}{ゆゑ}\ruby{也}{}。
+    % 況(ンヤ)
+    \ruby{況}{}\okurigana{ンヤ}
+    % 陽春召(ク-二-レ)我(ヲ)
+    % Note: Adjusted 'ク二' to Okurigana 'ク' Kaeriten '二'. 
+    % Added 'レ' as per your input, though grammatically '二' usually handles the jump.
+    陽春\ruby{召}{}\okurigana{ク}\kaeriten{二}
+    \ruby{我}{}\okurigana{ヲ}
+    % 以(テシ-二)煙景(ヲ-一)(、)
+    \ruby{以}{}\okurigana{テシ}\kaeriten{二}煙\ruby{景}{}\okurigana{ヲ}\kaeriten{一}、
+    % 大(たい)塊(くわい)
+    \ruby{大}{たい}\ruby{塊}{くわい}
+    % 假(か)(スニ-レ)我(ニ)
+    \ruby{假}{か}\okurigana{スニ}\kaeriten{レ}\ruby{我}{}\okurigana{ニ}
+    % 以(テスルヲヤ-二)文章(ヲ-一)(。)
+    \ruby{以}{}\okurigana{テスルヲヤ}\kaeriten{二}
+    文\ruby{章}{}\okurigana{ヲ}\kaeriten{一}。 
+    % 會(くわい)(シテ-二)桃(たう)李(り)之芳(はう)園(ニ-一)(、)
+    \ruby{會}{くわい}\okurigana{シテ}\kaeriten{二}
+    \ruby{桃}{たう}\ruby{李}{り}
+    之\ruby{芳}{はう}\ruby{園}{ゑん}\okurigana{ニ}\kaeriten{一}、
+    % 序(じょ)(ス-二)天(てん)倫(りん)之樂(らく)事(ヲ-一)(。)
+    \ruby{序}{じょ}\okurigana{ス}\kaeriten{二}
+    \ruby{天}{てん}\ruby{倫}{りん}之
+    \ruby{樂}{らく}\ruby{事}{じ}\okurigana{ヲ}\kaeriten{一}。
+    % 群(ぐん)季(き)(ノ)俊(しゅん)秀(しう)(ナルハ)(、)
+    \ruby{群}{ぐん}\ruby{季}{き}\okurigana{ノ}
+    \ruby{俊}{しゅん}
+    \ruby{秀}{しう}\okurigana{ナルハ}、
+    % 皆爲(た)(リ-二)惠(けい)連(れん)(一)(。)
+    皆\ruby{爲}{た}\okurigana{リ}\kaeriten{二}
+    \ruby{惠}{けい}\ruby{連}{れん}\kaeriten{一}。
+    % 吾人(ノ)詠(えい)歌(か)(ハ)(、)
+    吾\ruby{人}{}\okurigana{ノ}
+    \ruby{詠}{えい}\ruby{歌}{か}\okurigana{ハ}、
+    % 獨(り)慚(は)(ズ-二)康(かう)樂(らく)(ニ-一)(。)
+    \ruby{獨}{}\okurigana{り}\ruby{慚}{は}\okurigana{ズ}\kaeriten{二}
+    \ruby{康}{かう}\ruby{樂}{らく}\okurigana{ニ}\kaeriten{一}。
+    % 幽(いう)賞(しやう)未(いま)(ダ-レ)已(や)(マ)(、)
+    \ruby{幽}{いう}\ruby{賞}{しやう}
+    \ruby{未}{いま}\okurigana{ダ}\kaeriten{レ}\ruby{已}{や}\okurigana{マ}、
+    % 高(かう)談(だん)轉(うた)(タ)清(シ)(。)
+    \ruby{高}{かう}\ruby{談}{だん}
+    \ruby{轉}{うた}\okurigana{タ}\ruby{清}{}\okurigana{シ}。
+    % 開(イテ-二)瓊(けい)筵(えん)(ヲ-一)
+    \ruby{開}{}\okurigana{イテ}\kaeriten{二}
+    \ruby{瓊}{けい}\ruby{筵}{えん}\okurigana{ヲ}\kaeriten{一}
+    % 以(テ)坐(シ-レ)花(二)(、)
+    \ruby{以}{}\okurigana{テ}
+    \ruby{坐}{}\okurigana{シ}\kaeriten{レ}\ruby{花}{}\okurigana{ニ}、
+    % 飛(バシテ-二)羽(う)觴(しやう)(ヲ-一)
+    \ruby{飛}{}\okurigana{バシテ}\kaeriten{二}
+    \ruby{羽}{う}
+    \ruby{觴}{しやう}\okurigana{ヲ}\kaeriten{一}
+    % 以(テ)醉(フ-レ)月(ニ)(。)
+    \ruby{以}{}\okurigana{テ}
+    \ruby{醉}{}\okurigana{フ}\kaeriten{レ}\ruby{月}{}\okurigana{ニ}。
+    % 不(ンバ-レ)有(ラ-二)佳(か)作(さく)(一)(、)
+    \ruby{不}{}\okurigana{ンバ}\kaeriten{レ}
+    \ruby{有}{}\okurigana{ラ}\kaeriten{二}
+    \ruby{佳}{か}\ruby{作}{さく}\kaeriten{一}、
+    % 何(ゾ)伸(ベン-二)雅(が)懐(くわい)(ヲ-一)(。)
+    \ruby{何}{}\okurigana{ゾ}\ruby{伸}{}\okurigana{ベン}\kaeriten{二}
+    \ruby{雅}{が}\ruby{懐}{くわい}\okurigana{ヲ}\kaeriten{一}。
+    % 如(も)(シ)
+    \ruby{如}{も}\okurigana{シ}
+    % 詩不(ンバ-レ)成(ラ)(、)
+    詩\ruby{不}{}\okurigana{ンバ}\kaeriten{レ}\ruby{成}{}\okurigana{ラ}、
+    % 罰(ハ)依(ラン-二)金(きん)谷(こく)(ノ)酒(しゅ)數(すう)(ニ-一)(。)
+    \ruby{罰}{}\okurigana{ハ}
+    \ruby{依}{}\okurigana{ラン}\kaeriten{二}
+    \ruby{金}{きん}\ruby{谷}{こく}\okurigana{ノ}
+    \ruby{酒}{しゅ}\ruby{數}{すう}\okurigana{ニ}\kaeriten{一}。
+
+    \vspace{1.5\zw}
+    
+    \small
+    李太白「春夜桃李の園に宴するの序」\\
+    星川清孝 著「古文真宝選新解」\\
+    明治書院 (一九五六) より引用。
+
+  }
+
+\vspace{1cm}
+
+\noindent\hfill
+  \vbox{\hsize=10cm \tate \Large
+    \noindent
+    {\gtfamily\bfseries 春夜桃李の園に宴するの序}
+    \vspace{1\zw}
+
+
+
+    \ruby{夫}{そ}れ天地は
+    \ruby{萬物}{ばんぶつ}の\ruby{逆旅}{げきりょ}、
+    \ruby{光陰}{くわういん}は
+    百代の\ruby{過客}{くわかく}なり。
+    \ruby{而}{しか}して\ruby{浮生}{ふせい}夢の\ruby{若}{ごと}し。
+    \ruby{歡}{よろこび}を爲すこと\ruby{幾何}{いくばく}ぞ。
+    古人\ruby{燭}{しょく}を
+    \ruby{秉}{とっ}て夜遊びしは、
+    \ruby{良}{まこと}に\ruby{以}{ゆゑ}有るなり。
+    \ruby{況}{いは}んや
+    陽春我を\ruby{召}{まね}くに煙景を以てし、
+    \ruby{大塊}{たいくわい}我に
+    \ruby{假}{か}すに文章を以てするをや。
+    \ruby{桃李}{たうり}の\ruby{芳園}{はうゑん}に\ruby{會}{くわい}して、
+    \ruby{天倫}{てんりん}の\ruby{樂事}{らくじ}を\ruby{序}{じょ}す。
+    \ruby{群季}{ぐんき}の\ruby{俊秀}{しゅんしう}なるは、
+    皆\ruby{惠連}{けいれん}たり。
+    吾人の\ruby{詠歌}{えいか}は、
+    \ruby{獨}{ひと}り\ruby{康楽}{かうらく}に\ruby{慚}{は}ず。
+    \ruby{幽賞}{いうしやう}
+    \ruby{未}{いま}だ\ruby{已}{や}まず。
+    \ruby{高談}{かうだん}\ruby{転}{うた}た清し。
+    \ruby{瓊筵}{けいえん}を開いて以て花に坐し、
+    \ruby{羽觴}{うしやう}を飛ばして以て月に醉ふ。
+    佳作有らずんば、何ぞ\ruby{雅懐}{がくわい}を伸べん。
+    \ruby{如}{も}し詩成らずんば、罰は\ruby{金谷}{きんこく}の
+    \ruby{酒數}{しゅすう}に\ruby{依}{よ}らん。
+
+
+}
+  
+\section{main.texの構造と使い方}
+
+この \texttt{main.tex} ファイルは、論文全体の構成をコントロールするものです。
+
+実際の文章（章ごとの内容）はすべて別のファイル（\texttt{Chapters/} フォルダなど）に分かれており、この \texttt{main.tex} はそれらを\textbf{「どの順番で、どのように並べるか」}を指示する役割を持っています。
+
+以下に、各ブロックの役割と使い方を解説します。
+
+\subsection{前付（Front Matter）}
+論文の本文に入る前の、表紙や目次などです。
+
+\begin{lstlisting}
+% --- TITLE PAGE ---
+\include{FrontBackmatter/Titlepage}       % 表紙
+\include{FrontBackmatter/Titleback}       % 表紙の裏
+\cleardoublepage\include{FrontBackmatter/Committee}     % 審査員一覧
+\cleardoublepage\include{FrontBackmatter/Dedication}    % Dedication
+\cleardoublepage\include{FrontBackmatter/Abstract}      % アブストラクト
+\cleardoublepage\include{FrontBackmatter/Publications}  % 研究業績リスト
+\cleardoublepage\include{FrontBackmatter/Acknowledgments} % 謝辞
+\cleardoublepage\include{FrontBackmatter/Contents}      % 目次
+\end{lstlisting}
+
+\begin{itemize}
+    \item \textbf{使い方}: \texttt{FrontBackmatter} フォルダの中にある各 \texttt{.tex} ファイル\marginnote{Contents.tex触らないほうがいい}を編集してください。
+    \item \textbf{\texttt{\textbackslash cleardoublepage}}: 「奇数ページ（右側のページ）から始める」という命令です。両面印刷の際、新しいセクションが必ず右ページから始まるように調整します。
+\end{itemize}
+
+\subsection{本文（Main Matter）}
+ここからページ番号が「アラビア数字（1, 2, 3...）」に切り替わります。
+
+\begin{lstlisting}
+% --- MAINMATTER: Fancy style ---
+\mainmatter          % ページ番号を「1」にリセット
+\pagestyle{fancy}    % ヘッダーを表示する設定
+\end{lstlisting}
+
+\subsubsection{部（Part）と章（Chapter）の構成}
+このテンプレートでは、複数の「章」をまとめて「部（Part）」として整理できるスタイルになっています。
+
+\begin{lstlisting}
+\cleardoublepage
+% 部（Part）の扉ページに載せる説明文
+\ctparttext{This part provides essential information...}
+
+% 「第I部 ガイド」という扉ページを作成
+\part{ガイド}\label{pt:guide}
+
+% 実際の章ファイルを読み込み
+\include{Chapters/Chapter01}
+\cleardoublepage
+\end{lstlisting}
+
+\begin{description}
+    \item[\texttt{\textbackslash ctparttext\{...\}}] 部（Part）のタイトルページに、その部の概要説明を入れることができます。
+    \item[\texttt{\textbackslash part\{...\}}] 論文を大きく区切るための「部」を作ります。
+    \item[\texttt{\textbackslash include\{...\}}] 実際に執筆する章ファイル（\texttt{.tex}）をここで読み込みます。新しい章を増やす場合は、ここに追記します。
+\end{description}
+
+\subsection{付録（Appendix）と参考文献}
+本文が終わった後の資料セクションです。
+
+\begin{lstlisting}
+\appendix             % 番号体系が「付録A」などに変わります
+\cleardoublepage
+\part{付録}
+\include{Chapters/AppendixA}
+\include{Chapters/AppendixB}
+
+% 目次の見た目を整える
+\addtocontents{toc}{\protect\addvspace{0.5pc}}
+\cleardoublepage
+
+% 参考文献リストを出力
+\printbibliography[heading=bibintoc, title={引用文献}]
+\end{lstlisting}
+
+\begin{itemize}
+    \item 付録が必要なら \texttt{Chapters/AppendixA.tex} などを編集します。
+    \item 参考文献は \texttt{.bib} ファイルに基づき自動生成されます。
+\end{itemize}
+
+\subsection{執筆のアドバイス}
+
+\begin{enumerate}
+    \item \textbf{\texttt{main.tex} は編集しない}: 主に章の順番を入れ替えたり、新しい章を追加するときだけ編集します。
+    \item \textbf{執筆は個別のファイルで}: 文章を書くときは、\texttt{Chapters/Chapter01.tex} などの個別のファイルを開いて書いてください。
+    \item \textbf{コンパイルは常に \texttt{main.tex} で}: どのファイルを編集していても、コンパイルの対象はこの \texttt{main.tex} になるように設定してください（OverleafのMain document設定やマジックコメントを活用）。
+\end{enumerate}
+
+

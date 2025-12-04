@@ -3,6 +3,7 @@
 
 
 論文の組版において \LaTeX やWord\mynote{Wordは苦手です。}と格闘しておられる方も多いのではないでしょうか。
+このテンプレートは、
 \texttt{classicthesis} パッケージ  4.8 (\url{https://ctan.org/pkg/classicthesis?lang=en}) をベースに、我々の執筆ニーズに合わせてカスタマイズしたものです。
 
 主な変更点は以下の通りです：
@@ -14,14 +15,14 @@
 \end{itemize}
 
 
-本章では、テンプレートの機能と基本的な使用方法の概要を説明します。\autorefja{ch:examples}と\autorefja{ch:cat}では、実用的な例を用いて様々な \LaTeX の機能を紹介します。
+\autorefja{ch:examples}と\autorefja{ch:cat}では、実例を用いて様々な \LaTeX の機能を紹介します。
 
 \section{クイックスタート}
 
 \textbf{すぐに執筆を始めたいですか？} 基本的な手順は以下の通りです：
 
 \begin{enumerate}
-    \item \textsf{情報の入力}: \texttt{classicthesis-config.tex} (54行目以降) を編集し、名前、タイトル、所属などを入力します。
+    \item \textsf{情報の入力}: \texttt{config.tex} (14行目以降) を編集し、名前、タイトル、所属などを入力します。
 
     \item \textsf{執筆}: \texttt{Chapters/Chapter01.tex}、\texttt{Chapter02.tex} などに章ごとのコンテンツを記述します。
 
@@ -31,9 +32,9 @@
 
     \item \textsf{コンパイル}: メニュー (左上) を開き、コンパイラを LuaLaTeX に設定します。
 
-    \item \textsf{Configuration Options}: In line 35 of \texttt{classicthesis-config.tex}, you can enable specific settings. Use \texttt{dottedtoc} to set page numbers flushed right in the Table of Contents, or enable \texttt{drafting} to print the version information on the first page of the thesis.
+    \item \textsf{Configuration Options}: In  texttt{config.tex}, you can enable specific settings. Enable \texttt{drafting} to print the version information on the first page of the thesis. Or set the metadata.
     
-    \item \textsf{Version History}: In \texttt{VersionHistory.tex}, change the version history details 
+    \item \textsf{Version History}: In \texttt{VersionHistory.tex}, change the version history details.
 \end{enumerate}
 
 
