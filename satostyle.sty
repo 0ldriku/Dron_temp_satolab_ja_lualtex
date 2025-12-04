@@ -44,6 +44,10 @@
 \setlength{\marginparwidth}{30mm} 
 \setlength{\marginparsep}{5mm}    % Space between text and note
 
+\usepackage{luacolor} % Required for lua-ul
+\usepackage{lua-ul}
+\usepackage{fancybox}
+
 % 2. Load todonotes with your specific settings
 \usepackage[
     textwidth=30mm,         % Fit inside the 32mm margin
@@ -611,9 +615,11 @@
 % etoolbox for future use
 %\usepackage{etoolbox} % Already loaded at top
 
-\ModifyHeading{section}{font={\HeadSans\mdseries\Large}}
-\ModifyHeading{subsection}{font={\HeadSans\mdseries\large}}
+\ModifyHeading{section}{font={\HeadSans\mdseries\large}}
+\ModifyHeading{subsection}{font={\HeadSans\mdseries\normalsize}}
 \ModifyHeading{subsubsection}{font={\HeadSans\mdseries\normalsize}}
+\ModifyHeading{paragraph}{font={\HeadSans\mdseries\normalsize}}
+\ModifyHeading{subparagraph}{font={\HeadSans\mdseries\normalsize}}
 
 % ****************************************************************************************************
 % 6. ToC Customization (titletoc)

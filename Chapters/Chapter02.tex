@@ -72,34 +72,6 @@ Gradually, we reach {\small small text}, before returning to {\normalsize the de
 
 ここから{\small 少し小さな文字 (small)}になり、{\normalsize 標準のサイズ (normalsize)}に戻ります。強調したい場合は{\large やや大きな文字 (large)}、{\Large 大きな文字 (Large)}、あるいは{\LARGE さらに大きな文字 (LARGE)}を使います。見出しなどで目立たせるには{\huge 巨大な文字 (huge)}や、{\Huge 最大級の文字 (Huge)}を使用します。
 
-\subsection{英文の書式設定}
-
-\begin{lstlisting}
-% 英文のみ
-\textit{}  % イタリック
-\textbf{}  % ボールド
-\textsf{}  % ゴシック
-\end{lstlisting}
-
-
-The quick brown fox jumps over the lazy dog
-
-\textit{The quick brown fox jumps over the lazy dog}
-
-\textbf{The quick brown fox jumps over the lazy dog}
-
-
-
-
-% Sans-serif regular
-\textsf{The quick brown fox jumps over the lazy dog}
-
-% Sans-serif italic
-\textsf{\textit{The quick brown fox jumps over the lazy dog}}
-
-% Sans-serif bold
-\textsf{\textbf{The quick brown fox jumps over the lazy dog}}
-
 
 
 \subsection{略語}
@@ -272,9 +244,105 @@ Acronym testing: \ac{UML} -- \acs{UML} -- \acf{UML} -- \acp{UML}
 改ページを行うコマンドには、{\textbackslash}pagebreak、{\textbackslash}newpage、{\textbackslash}clearpage があります。それぞれの具体的な使用法は異なりますが、基本的には新しいページを開始するために使用されます。
 
 
+\section{書式設定}
+
+\subsection{英文フォント}
+
+\begin{lstlisting}
+% 英文のみ
+\textit{}  % イタリック
+\textbf{}  % ボールド
+\textsf{}  % ゴシック
+\end{lstlisting}
+
+
+The quick brown fox jumps over the lazy dog
+
+\textit{The quick brown fox jumps over the lazy dog}
+
+\textbf{The quick brown fox jumps over the lazy dog}
+
+
+
+
+% Sans-serif regular
+\textsf{The quick brown fox jumps over the lazy dog}
+
+% Sans-serif italic
+\textsf{\textit{The quick brown fox jumps over the lazy dog}}
+
+% Sans-serif bold
+\textsf{\textbf{The quick brown fox jumps over the lazy dog}}
+
+\subsection{下線}
+
+
+\begin{lstlisting}
+\underLine{吾輩は猫である。名前はまだ無い。}
+\end{lstlisting}
+
+\underLine{吾輩は猫である。名前はまだ無い。}
+
+\subsection{取り消し線}
+\begin{lstlisting}
+\strikeThrough{吾輩は猫である。名前はまだ無い。}
+\end{lstlisting}
+
+\strikeThrough{吾輩は猫である。名前はまだ無い。}
+
+
+\subsection{ハイライト}
+\begin{lstlisting}
+\highLight{吾輩は猫である。}
+\end{lstlisting}
+
+\highLight{吾輩は猫である。}
+
+\subsection{文字色}
+
+\begin{lstlisting}
+\textcolor{red}{赤文字}
+\end{lstlisting}
+
+\textcolor{red}{赤文字}\textcolor{blue!50!black}{濃い青文字}
+
+\subsection{枠}
+
+\begin{lstlisting}
+\begin{tcolorbox}[title=吾輩は猫である]
+名前はまだ無い。
+\end{tcolorbox}
+\ovalbox{丸角の枠}, \Ovalbox{太丸角の枠}, \fbox{長方形の枠}, \doublebox{2重長方形の枠}
+\end{lstlisting}
+
+\begin{tcolorbox}[title=吾輩は猫である]
+名前はまだ無い。
+\end{tcolorbox}
+
+\ovalbox{丸角の枠}, \Ovalbox{太丸角の枠}, \fbox{長方形の枠}, \doublebox{2重長方形の枠}
+
+\section{ハイパーリンク}
+
+\begin{lstlisting}
+\url{https://www.sankei.com/article/20210915-6LED2WGCSBJEHACQU4FUCHFF5Y/?outputType=theme_nyushi}
+\end{lstlisting}
+
+\url{https://www.sankei.com/article/20210915-6LED2WGCSBJEHACQU4FUCHFF5Y/?outputType=theme_nyushi}
+
+\href{https://www.sankei.com/article/20210915-6LED2WGCSBJEHACQU4FUCHFF5Y/?outputType=theme_nyushi}{東工大パワー丼}
 
 \section{図}
 図は \texttt{gfx/} フォルダに配置してください。
+
+\begin{lstlisting}
+\begin{figure}[htbp] 
+    \centering
+    \includegraphics[width=0.5\textwidth]{gfx/example_1.jpg} 
+    \caption{東工大パワー丼}
+    \label{fig:powerdon}
+\end{figure}
+
+\end{lstlisting}
 
 \begin{figure}[htbp]
     \centering
@@ -284,23 +352,44 @@ Acronym testing: \ac{UML} -- \acs{UML} -- \acf{UML} -- \acp{UML}
     \label{fig:example-single}
 \end{figure}
 
+\newpage
 
+\begin{lstlisting}
 \begin{figure}[htbp]
     \centering
-    \begin{minipage}[b]{0.4\textwidth}
+    \begin{minipage}[b]{0.45\textwidth}
         \centering
         \includegraphics[width=\textwidth]{gfx/example_1.jpg}
         \caption*{(a) 左の図}
     \end{minipage}
     \hfill
-    \begin{minipage}[b]{0.4\textwidth}
+    \begin{minipage}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{gfx/example_2.jpg}
+        \caption*{(b) 右の図}
+    \end{minipage}
+    
+    \caption{2つの図の全体キャプション}
+    \label{fig:two}
+\end{figure}
+\end{lstlisting}
+
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{gfx/example_1.jpg}
+        \caption*{(a) 左の図}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[b]{0.45\textwidth}
         \centering
         \includegraphics[width=\textwidth]{gfx/example_2.jpg}
         \caption*{(b) 右の図}
     \end{minipage}
     
 
-    
     \caption{2つの図の全体キャプション}
     \label{fig:two}
 \end{figure}
@@ -787,7 +876,7 @@ HDMI Cable 10ft & Cable & 412 & 15 \\
 
 \subsection{Other Languages}\label{sec:otherlanguages}
 
-一応下記の4つの言語のフォントを入れてみました\marginnote{satostyle.sty line 154}。他の言語のフォントを追加すれば、使えるはずです。
+一応下記の4つの言語のフォントを入れてみました\marginnote{\footnotesize satostyle.sty line 154}。他の言語のフォントを追加すれば、使えるはずです。
 
 例えば、タイ語の場合：
 
@@ -869,6 +958,9 @@ HDMI Cable 10ft & Cable & 412 & 15 \\
 
 食堂は騒がしかったが、私の集中力は一点に注がれていた。目の前にある伝説の料理、東工大パワー丼を見つめていた\todo{パワー丼を食べる。}。多くの者が盲目的にそれを消費する中、私はその構造的完全性を理解しようと試みた\todo{おかわりする。}。
 
+
+
+
 \section{Draft Mode}
 
 \begin{lstlisting}
@@ -876,7 +968,7 @@ HDMI Cable 10ft & Cable & 412 & 15 \\
 \draftfalse  % オフにする
 \end{lstlisting}
 
-Draft Modeをオンにすると、一番最初にVersion History, 各ページ内に今のVersionと時間が出力されます。\marginnote{In config.tex}
+Draft Modeをオンにすると、一番最初にVersion History, 各ページ内に今のVersionと時間が出力されます。\marginnote{\footnotesize In config.tex}
 
 Versionは手動で入力する必要があります。
 \begin{lstlisting}
@@ -885,7 +977,7 @@ Versionは手動で入力する必要があります。
 
 \section{余白}
 
-ページのレイアウトは下記の設定で調整できます。\marginnote{In main.tex} \texttt{gutter}と\texttt{fore\_edge}と統一すれば左右の右余白が同じになります。
+ページのレイアウトは下記の設定で調整できます。\marginnote{\footnotesize In main.tex} \texttt{gutter}と\texttt{fore\_edge}と統一すれば左右の右余白が同じになります。
 
 調整する場合は \texttt{marginnote}と\texttt{todonote}\mynote{使わないなら無視していいです}の余白も合わせて調整する必要があります。
 
@@ -909,6 +1001,7 @@ Versionは手動で入力する必要があります。
     \url{https://www.tug.org/texlive//Contents/live/texmf-dist/doc/latex/jlreq/jlreq-ja.html}
 \end{center}
 
+
 \section{ルビ}
 
 \ruby{吾輩}{わがはい}は猫である。名前はまだ無い。
@@ -919,25 +1012,15 @@ Versionは手動で入力する必要があります。
 \begingroup
 
 \noindent\hfill % Pushes everything after it to the right
-  \vbox{\hsize=5cm \tate 
+  \vbox{\hsize=12cm \tate 
     % --- Your Vertical Text Here ---
-    吾輩は猫である。名前はまだ無い。
-    どこで生れたかとんと見当がつかぬ。
-    何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。
-    % -------------------------------
+\ruby{吾輩}{わがはい}は猫である。名前はまだ無い。
+
+どこで生れたかとんと\ruby{見当}{けんとう}がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番\ruby{獰悪}{どうあく}な種族であったそうだ。この書生というのは時々我々を\ruby{捕}{つかま}えて\ruby{煮}{に}て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の\ruby{掌}{てのひら}に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの\ruby{見始}{みはじめ}であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで\ruby{薬缶}{やかん}だ。その\ruby{後}{ご}猫にもだいぶ\ruby{逢}{あ}ったがこんな\ruby{片輪}{かたわ}には一度も\ruby{出会}{でく}わした事がない。のみならず顔の真中があまりに突起している。そうしてその穴の中から時々ぷうぷうと\ruby{煙}{けむり}を吹く。どうも\ruby{咽}{む}せぽくて実に弱った。これが人間の飲む\ruby{煙草}{たばこ}というものである事はようやくこの頃知った。
+    
   }
 
-\vspace{1cm}
 
-\noindent\hfill % Pushes everything after it to the right
-\vbox{\hsize=5cm \tate 
-    % --- Your Vertical Text Here ---
-    \ruby{子}{し}\ruby{曰}{いわ}\okurigana{ク}、
-    \ruby{学}{まな}\okurigana{ビテ}\kaeriten{レ}
-    \ruby{時}{とき}\okurigana{ニ}\ruby{習}{なら}\kaeriten{二}\ruby{之}{これ}\kaeriten{一}\okurigana{ヲ}、
-    \ruby{亦}{また}\ruby{説}{よろこ}\okurigana{バ}\kaeriten{レ}
-    \ruby{乎}{し}\okurigana{カ}。
-}
 
 \endgroup
 
@@ -1055,10 +1138,12 @@ Versionは手動で入力する必要があります。
     \vspace{1.5\zw}
     
     \small
+    \begingroup
+    \setlength{\parindent}{0pt}
     李太白「春夜桃李の園に宴するの序」\\
     星川清孝 著「古文真宝選新解」\\
     明治書院 (一九五六) より引用。
-
+    \endgroup
   }
 
 \vspace{1cm}
@@ -1101,6 +1186,21 @@ Versionは手動で入力する必要があります。
 
 
 }
+
+
+\section{単位と数値}
+数値や単位を記述する際は、\texttt{siunitx} パッケージを使用すると、自動的に正しいスペーシングが行われます。
+
+\begin{lstlisting}
+\SI{10}{\kg} 
+\SI{9.8}{\meter\per\second\squared}
+\num{1.23e5}
+\si{\degreeCelsius}
+\end{lstlisting}
+
+
+\SI{10}{\kg}, \SI{9.8}{\meter\per\second\squared}
+, \num{1.23e5}, \si{\degreeCelsius}
   
 \section{main.texの構造と使い方}
 
@@ -1126,7 +1226,7 @@ Versionは手動で入力する必要があります。
 \end{lstlisting}
 
 \begin{itemize}
-    \item \textbf{使い方}: \texttt{FrontBackmatter} フォルダの中にある各 \texttt{.tex} ファイル\marginnote{Contents.tex触らないほうがいい}を編集してください。
+    \item \textbf{使い方}: \texttt{FrontBackmatter} フォルダの中にある各 \texttt{.tex} ファイル\marginnote{\footnotesize Contents.tex触らないほうがいい}を編集してください。いらないものはコメントアウト(一番最初に\%)すればよいです。
     \item \textbf{\texttt{\textbackslash cleardoublepage}}: 「奇数ページ（右側のページ）から始める」という命令です。両面印刷の際、新しいセクションが必ず右ページから始まるように調整します。
 \end{itemize}
 
